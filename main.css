@@ -1,0 +1,116 @@
+body {
+	background: #f5f5f5;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+h2 {
+	margin-top: 150px;
+	text-align: center;
+	font-weight: 500;
+	color: #3b3b3b;
+}
+
+#container {
+	margin: 20px auto;
+	margin-bottom: 100px;
+	padding: 20px;
+	width: 500px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+#creator {
+	display: inline-block;
+	height: 40px;
+	border-radius: 3px;
+	outline: none;
+	border: 1px solid #4b4b4b;
+	width: 90%;
+	margin: 15px 2.5%;
+	font-size: 22.5px;
+	padding: 5px 2.5%;
+	font-weight: 300;
+}
+
+.item {
+	display: inline-block;
+	height: 20px;
+
+	outline: none;
+	border: 1px solid #53A4D4;
+	border-radius: 3px;
+	width: 90%;
+	margin: 2.5px 2.5%;
+	font-size: 15px;
+	padding: 5px 2.5%;
+}
+
+.item .delete {
+	float: right;
+	cursor: pointer;
+	font-size: 130%;
+	line-height: 20px;
+	color: #a5a5a5;
+}
+
+.item .delete:hover {
+	color: #000;
+}
+
+.item .title {
+	display: inline-block;
+	margin-left: 10px;
+	line-height: 20px;
+	overflow: hidden;
+	width: 80%;
+	vertical-align: bottom;
+}
+
+.done .title{
+	color: #c5c5c5;
+	text-decoration: line-through;
+}
+
+.done {
+	border-color: #c5c5c5;
+}
+
+footer {
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 3px;
+	outline: none;
+	border-bottom: 1px solid #4b4b4b;
+	width: 90%;
+	margin: 15px 2.5%;
+	font-size: 20px;
+	padding: 2px 2.5%;
+	font-weight: 300;
+	position: relative;
+}
+
+#remain {
+	color: #53A4D4;
+}
+
+#deleteAll {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 1px solid #53A4D4;
+	border-radius: 2px;
+	background-color: white;
+	cursor: pointer;
+	color: #3b3b3b;
+	transition: color 0.1s, background-color 0.1s;
+}
+
+#deleteAll:hover {
+	color: #fff;
+	background-color: #53A4D4;
+}

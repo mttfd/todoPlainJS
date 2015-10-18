@@ -28,7 +28,7 @@ $(function() {
 
     $("#items").on("change", ".complete", function(evt) {
         var uuid = $(this).parent().attr("id");
-        controller.toggleItem(uuid, model);
+        controller.toggleItem(uuid, model, this);
     });
 
 

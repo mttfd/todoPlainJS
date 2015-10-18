@@ -16,11 +16,13 @@ function BuildController(count) {
         },
 
         deleteItem: function(id, model) {
-            console.log($("#" + id).html());
+            var checked = $("#" + id + " input")[0].checked;
             $("#" + id).remove();
             model.destroyTodo(id);
-            --count;
-            this.updateFooter();
+            if(!checked) {
+                --count;
+                this.updateFooter();
+            }
         },
 
         clearItems: function(model) {
@@ -30,9 +32,10 @@ function BuildController(count) {
             this.updateFooter();
         },
 
-        toggleItem: function(id, model) {
+        toggleItem: function(id, model, self) {
             var checked = model.toggleCompleted(id);
-            checked ? (--count) : (++count);
+            var item = $(self).parent();
+            checked ? (--count) && item.addClass("done") : (++count) && item.removeClass("done");
             this.updateFooter();
         },
 
